@@ -35,9 +35,9 @@ helm test opengym -n fitness          # calls /api/health through the web contai
 
 ### As a published dependency (no clone)
 
-Each release also publishes the chart to OCI on GHCR, `oci://ghcr.io/duartesantos8/opengym`, with
-the tags `X.Y.Z`, `X.Y` and `latest` (all the same chart). Add it to your own `Chart.yaml` instead
-of cloning this repo:
+Each release also publishes the chart to OCI on GHCR, `oci://ghcr.io/duartesantos8/opengym`, tagged
+`X.Y.Z` and `X.Y`, both built by helm itself (no extra tooling); a dependency pins the app it runs,
+e.g. `1.4.5`. Add it to your own `Chart.yaml` instead of cloning this repo:
 
 ```yaml
 dependencies:
